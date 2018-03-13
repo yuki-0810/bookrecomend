@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+    font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/**質問結果**/
+	#main{
+		width:100%;
+	}
+	.header{
+		display:none;
+	}
+	.entry-content{
+		padding:1.1em 1.1em 0!important;
+	}
+	.article-header{
+		display:none;
+	}
+	h2{
+		text-align:center;
+	}
+	#icon_hatena{
+		display:block;
+		margin:5px auto 40px auto;
+	}
+	.question-wrap{
+	}
+	.question-header{
+		text-align:center;
+		margin-bottom:50px;
+		margin-top:0;
+	}
+	.question-image{
+		display:block;
+		margin:0 auto 15px auto!important;
+		width:70%;
+		border:3px solid #444;
+		border-radius:15px;
+	}
+	.question-section input{
+		display: none;
+	}
+	.question-section label{
+		display: block;
+		float: left;
+		cursor: pointer;
+		width: 25%;
+		margin: 0;
+		padding: 12px 5px;
+		border-right: 1px solid #abb2b7;
+		background: #bdc3c7;
+		color: #555e64;
+		font-size: 0.7em;
+		text-align: center;
+		line-height: 1;
+		transition: .2s;
+		margin-bottom:60px;
+	}
+	.question-section label:first-of-type{
+		border-radius: 3px 0 0 3px;
+	}
+	.question-section label:last-of-type{
+		border-right: 0px;
+		border-radius: 0 3px 3px 0;
+	}
+	.question-section input[type="radio"]:checked + label {
+		background-color: #a1b91d;
+		color: #fff;
+	}
+	.question-title{
+		clear:both;
+		margin:6px auto 4px auto!important;
+		font-size:0.8em;
+		text-align:center;
+	}
+	#question-submit{
+		display:block;
+		margin:0 auto;
+		padding: 10px 30px;
+		font-size: 1.2em;
+		background-color: #000;
+		color: #fff;
+		border-style: none;
+	}
+
+
+	/**結果表示**/
+	.type-display{
+		text-align:center;
+		font-size:25px;
+		margin:30px 0 5px 0!important;
+	}
+	.type-description{
+		margin:10px 15px 20px 15px!important;
+	}
+
+
+	/**立方体結果表示**/
+	.cube-wrap {
+	  width: 100%;
+	  transform-style: preserve-3d;
+	  	-webkit-transform-style: preserve-3d;
+	  perspective: 300px;
+	  	-webkit-perspective: 300px;
+	}
+	
+	.cube {
+	  width: 1px;
+	  height: 1px;
+	  margin: 150px auto;
+	  transform-style: preserve-3d;
+	  -webkit-transform-style: preserve-3d;
+	  position: relative;
+	}
+	
+	.surface {
+	  width: 150px;
+	  height: 150px;
+	  border: 3px solid #444;
+	  position: absolute;
+	  left: calc(-150px / 2);
+	  top: calc(-150px / 2);
+	  text-align: center;
+	  line-height: 150px;
+	  color:white;
+	  font-size:0.9em;
+	}
+	
+	/* 面個別CSS */
+	.front {
+	  transform:
+	    translateZ(calc(150px / 2));
+	  -webkit-transform:
+	    translateZ(calc(150px / 2));
+	  background: rgba(255, 107, 53, 0.5);
+	}
+	
+	.back {
+	  transform:
+	   translateZ(calc(-150px / 2)) rotateY(180deg);
+	  -webkit-transform:
+	   translateZ(calc(-150px / 2)) rotateY(180deg);
+	  background: rgba(239, 239, 208, 0.9);
+	}
+	.right {
+	  transform: 
+	    translateX(calc(150px / 2)) rotateY(90deg);
+	  -webkit-transform: 
+	    translateX(calc(150px / 2)) rotateY(90deg);
+	  background: rgba(25, 100, 158, 0.5);
+	}
+	.left {
+	  transform:
+	    translateX(calc(-150px / 2)) rotateY(-90deg);
+	  -webkit-transform:
+	    translateX(calc(-150px / 2)) rotateY(-90deg);
+	  background: rgba(6, 65, 137, 0.5);
+	}
+	.top{
+	  transform:
+	    translateY(calc(-150px / 2)) rotateX(90deg);
+	  -webkit-transform:
+	    translateY(calc(-150px / 2)) rotateX(90deg);
+	  background: rgba(247, 196, 158, 0.5);
+	}
+	.bottom{
+	  transform:
+	   translateY(calc(150px / 2)) rotateX(-90deg) ;
+	  -webkit-transform:
+	   translateY(calc(150px / 2)) rotateX(-90deg) ;
+	  background: rgba(204, 199, 185, 0.5);
+	}
+	
+	/* アニメーション */
+	.cube {
+	  animation: rotation 17s linear 0s infinite normal;
+	  -webkit-animation: rotation 17s linear 0s infinite normal;
+	}
+	
+	/* キーフレーム */
+	@keyframes rotation{
+	    100%{
+	    transform:
+	      rotateX(360deg) rotateZ(360deg);
+	  }
+	}
+	@-webkit-keyframes rotation{
+	    100%{
+	    -webkit-transform:
+	      rotateX(360deg) rotateZ(360deg);
+	
+	  }
+	}
+
+	/*AmazonAPI*/
+	.amazon-wrap{
+		display:block;
+		margin:0 9.4%;
+	}
+	.amazon-link{
+		float:left;
+		display:block;
+		margin:0 4%;
+	}
+
+	.amazon-img{
+		text-align:center;
+		width:100%;
+	}
+
+
+	.back-top{
+		clear:both;
+		text-align:center;
+	}
